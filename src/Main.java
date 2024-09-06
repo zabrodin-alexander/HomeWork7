@@ -8,6 +8,7 @@ public class Main {
         int i = 0;
         while (total < 2_459_000){
             total = total + safe;
+            total = total + total/100;
             i++;
             System.out.println("Месяц " + i + ", сумма накоплений ровна " + total + " рублей. ");
         }
@@ -95,7 +96,7 @@ public class Main {
        //task 8
         System.out.println("Task 8");
 
-       int currentYear = 2024;
+       int currentYear = 1234;
        int twoHundredBackward = currentYear - 200;
        int oneHundredForward = currentYear + 100;
        for (int t = 0; t <= oneHundredForward; t += 79){
