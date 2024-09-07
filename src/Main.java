@@ -104,25 +104,5 @@ public class Main {
                 System.out.println(t + " год, когда над Землей пролетает комета.");
             }
         }
-
-        // Способы решения от наставника на разборе
-        int period = 79;
-        int startSeeling = 0;
-        int start = currentYear - 200;
-        int end = currentYear + 100;
-        for (int year = startSeeling; year < end ; year += period) {
-            if(year > start){
-                System.out.println(year + " год, когда над Землей пролетает комета.");
-            }
-        }
-        // второй способ решения данной здачи
-        for (int year = start; year < end; year++){
-            if(year % period == startSeeling){
-                System.out.println(year + " год, когда над Землей пролетает комета.");;
-            }
-
-        }
-
-
     }
 }
