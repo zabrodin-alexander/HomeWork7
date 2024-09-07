@@ -6,9 +6,9 @@ public class Main {
         int total = 0;
         int safe = 15000;
         int i = 0;
-        while (total < 2_459_000){
+        while (total < 2_459_000) {
             total = total + safe;
-            total = total + total/100;
+            total = total + total / 100;
             i++;
             System.out.println("Месяц " + i + ", сумма накоплений ровна " + total + " рублей. ");
         }
@@ -22,7 +22,7 @@ public class Main {
             System.out.print("" + q + " ");
         }
         System.out.println();
-        for (int w = 10 ; w > 0; w--){
+        for (int w = 10; w > 0; w--) {
             System.out.print("" + w + " ");
         }
         System.out.println();
@@ -46,11 +46,11 @@ public class Main {
         double total1 = 0;
         int safe1 = 15000;
         int m = 1;
-        while (total1 < 12_000_000){
+        while (total1 < 12_000_000) {
             m++;
             total1 = total1 + safe1;
             total1 = (total1 * 1.07);
-            System.out.println( "Месяц " + m + ", сумма накоплений ровна " +  Math.round(total1) + " рублей.");
+            System.out.println("Месяц " + m + ", сумма накоплений ровна " + Math.round(total1) + " рублей.");
         }
 
         //task 5
@@ -59,12 +59,12 @@ public class Main {
         double total2 = 0;
         int safe2 = 15000;
         int v = 1;
-        while (total2 < 12_000_000){
+        while (total2 < 12_000_000) {
             v++;
             total2 = total2 + safe2;
-            total2 = (total2 * 1.07) ;
+            total2 = (total2 * 1.07);
             if (v % 6 == 0) {
-                System.out.println( "Месяц " + v + ", сумма накоплений ровна " +  Math.round(total2) + " рублей.");
+                System.out.println("Месяц " + v + ", сумма накоплений ровна " + Math.round(total2) + " рублей.");
             }
         }
 
@@ -75,34 +75,54 @@ public class Main {
         int safe3 = 15000;
         int x = 1;
         int time = 9 * 12;
-        while (x <= time){
+        while (x <= time) {
             x++;
             total3 = total3 + safe3;
-            total3 = (total3 * 1.07) ;
+            total3 = (total3 * 1.07);
             if (x % 6 == 0) {
-                System.out.println( "Через " + x + " месяцев, сумма накоплений ровна " +  Math.round(total3) + " рублей.");
+                System.out.println("Через " + x + " месяцев, сумма накоплений ровна " + Math.round(total3) + " рублей.");
             }
         }
 
         //task 7
         System.out.println("Task 7");
 
-       int days = 31;
-       int friday = 5;
-       for( int day = friday; day <= days; day += 7){
-           System.out.println("Сегодня пятница, " + day + " число. Необходимо подготовить отчет");
-       }
+        int days = 31;
+        int friday = 5;
+        for (int day = friday; day <= days; day += 7) {
+            System.out.println("Сегодня пятница, " + day + " число. Необходимо подготовить отчет");
+        }
 
-       //task 8
+        //task 8
         System.out.println("Task 8");
 
-       int currentYear = 1234;
-       int twoHundredBackward = currentYear - 200;
-       int oneHundredForward = currentYear + 100;
-       for (int t = 0; t <= oneHundredForward; t += 79){
-           if (t >= twoHundredBackward){
-               System.out.println(t + " год, когда над Землей пролетает комета.");
-           }
-       }
+        int currentYear = 2024;
+        int twoHundredBackward = currentYear - 200;
+        int oneHundredForward = currentYear + 100;
+        for (int t = 0; t <= oneHundredForward; t += 79) {
+            if (t > twoHundredBackward){
+                System.out.println(t + " год, когда над Землей пролетает комета.");
+            }
+        }
+
+        // Способы решения от наставника на разборе
+        int period = 79;
+        int startSeeling = 0;
+        int start = currentYear - 200;
+        int end = currentYear + 100;
+        for (int year = startSeeling; year < end ; year += period) {
+            if(year > start){
+                System.out.println(year + " год, когда над Землей пролетает комета.");
+            }
+        }
+        // второй способ решения данной здачи
+        for (int year = start; year < end; year++){
+            if(year % period == startSeeling){
+                System.out.println(year + " год, когда над Землей пролетает комета.");;
+            }
+
+        }
+
+
     }
 }
