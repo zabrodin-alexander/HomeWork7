@@ -100,9 +100,38 @@ public class Main {
         int twoHundredBackward = currentYear - 200;
         int oneHundredForward = currentYear + 100;
         for (int t = 0; t <= oneHundredForward; t += 79) {
-            if (t > twoHundredBackward){
+            if (t > twoHundredBackward) {
                 System.out.println(t + " год, когда над Землей пролетает комета.");
             }
+        }
+
+        //task 9
+        System.out.println("Task 9");
+
+        for (int y = 1; y <= 30; y++) {
+            if (y % 3 == 0 && y % 5 == 0){
+                System.out.println(y + " pingpong");
+            }else if (y % 3 == 0){
+                System.out.println(y + " ping");
+            }else if (y % 5 == 0){
+                System.out.println(y + " ping");
+            }else {
+                System.out.println(y);
+            }
+        }
+
+        // task 10 Последовательность Фибоначи
+        System.out.println("Task 10");
+
+        int one = 0;
+        int two = 1;
+        System.out.print(one + " ");
+        System.out.print(two + " ");
+        for (int s = 2; s < 10; s++) {
+            int next = one + two;
+            System.out.print(next + " ");
+            one = two;
+            two = next;
         }
     }
 }
