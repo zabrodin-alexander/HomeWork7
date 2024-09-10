@@ -114,7 +114,7 @@ public class Main {
             }else if (y % 3 == 0){
                 System.out.println(y + " ping");
             }else if (y % 5 == 0){
-                System.out.println(y + " ping");
+                System.out.println(y + " pong");
             }else {
                 System.out.println(y);
             }
